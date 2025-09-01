@@ -73,7 +73,14 @@ app.MapPost("api/numbers", async (AppDbContext context, NumItem numItem) =>
 
     return TypedResults.Created($"api/numbers/{numItem.Id}", numItem);
 })
-.WithName("CreateNumItem");
+.WithName("CreateNumItem")
+.WithOpenApi(operation =>
+{
+    operation.Summary = "Create a new Num Item";
+    operation.Description = "New number entry saved.";
+    operation.Tags = new[] { new Microsoft.OpenApi.Models.OpenApiTag { Name = "Numbers" } };
+    return operation;
+}); ;
 
 #endregion
 
