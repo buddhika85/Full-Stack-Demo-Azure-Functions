@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36202.13 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interview-azure-function-app", "interview-azure-function-app.csproj", "{3AE79080-472C-47E4-AC7E-AD25BF09EE5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "number-Minimal-API", "..\number-Minimal-API\number-Minimal-API.csproj", "{F1F5271C-A8B8-4402-A4A8-0841AAB50B13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3AE79080-472C-47E4-AC7E-AD25BF09EE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AE79080-472C-47E4-AC7E-AD25BF09EE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AE79080-472C-47E4-AC7E-AD25BF09EE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F5271C-A8B8-4402-A4A8-0841AAB50B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F5271C-A8B8-4402-A4A8-0841AAB50B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F5271C-A8B8-4402-A4A8-0841AAB50B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F5271C-A8B8-4402-A4A8-0841AAB50B13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
