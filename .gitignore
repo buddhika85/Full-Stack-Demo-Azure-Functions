@@ -482,3 +482,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+interview-azure-function-app/Properties/serviceDependencies.json
+**/Properties/serviceDependencies.local.json
+**/Properties/launchSettings.json
+local.settings.json
