@@ -80,7 +80,7 @@ app.MapPost("api/numbers", async (AppDbContext context, NumItem numItem) =>
     operation.Description = "New number entry saved.";
     operation.Tags = new[] { new Microsoft.OpenApi.Models.OpenApiTag { Name = "Numbers" } };
     return operation;
-}); ;
+});
 
 #endregion
 
