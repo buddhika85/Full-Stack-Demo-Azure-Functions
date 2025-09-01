@@ -72,7 +72,8 @@ app.MapPost("api/numbers", async (AppDbContext context, NumItem numItem) =>
     await context.SaveChangesAsync();
 
     return TypedResults.Created($"api/numbers/{numItem.Id}", numItem);
-});
+})
+.WithName("CreateNumItem");
 
 #endregion
 
