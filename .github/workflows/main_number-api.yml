@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: number-api-artifact
-          path: number-Minimal-API/publish  # 👈 Adjusted path
+          path: ./publish  # ✅ Fixed path
 
   deploy:
     runs-on: windows-latest
@@ -50,6 +50,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: number-api-artifact
+          path: ./publish  # ✅ Optional: specify where to extract
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -63,4 +64,4 @@ jobs:
         with:
           app-name: 'number-api'
           slot-name: 'Production'
-          package: number-Minimal-API/publish  # 👈 Target only the API project
+          package: ./publish  # ✅ Fixed path
