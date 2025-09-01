@@ -16,7 +16,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: number-Minimal-API  # 👈 Set working directory
+        working-directory: number-Minimal-API
 
     steps:
       - uses: actions/checkout@v4
@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: number-api-artifact
-          path: ./publish  # ✅ Fixed path
+          path: number-Minimal-API/publish  # ✅ Absolute path from repo root
 
   deploy:
     runs-on: windows-latest
@@ -50,7 +50,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: number-api-artifact
-          path: ./publish  # ✅ Optional: specify where to extract
+          path: ./publish  # ✅ Extract to ./publish
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -64,4 +64,4 @@ jobs:
         with:
           app-name: 'number-api'
           slot-name: 'Production'
-          package: ./publish  # ✅ Fixed path
+          package: ./publish  # ✅ Deploy from extracted artifact
