@@ -487,3 +487,13 @@ interview-azure-function-app/Properties/serviceDependencies.json
 **/Properties/serviceDependencies.local.json
 **/Properties/launchSettings.json
 local.settings.json
+
+
+
+*.pubxml
+*.publishsettings
+
+
+**/Properties/PublishProfiles/Interview-Azure-Function-App - Zip Deploy.pubxml
+
+interview-azure-function-app/Properties/ServiceDependencies/Interview-Azure-Function-App - Zip Deploy/profile.arm.json
