@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace number_Minimal_API.Models;
+namespace docker_number_Minimal_API.Models;
 
 public class NumItem
 {
@@ -11,5 +11,5 @@ public class NumItem
 
     public string? CreatedTime => DateTime.Now.ToString();
 
-    public string Source => "Even Number - Azure API App Service";
+    public string Source => "ODD Number - Azure Container Instance - Docker Hub Image";
 }
