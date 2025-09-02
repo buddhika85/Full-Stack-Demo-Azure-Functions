@@ -1,0 +1,22 @@
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-ev
+WORKDIR /app
+
+COPY *.csproj ./
+RUN dotnet restore
+
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+
+# Ensure the app listens on port 80
+ENV ASPNETCORE_URLS=http://+:80
+
+EXPOSE 80
+
+COPY --from=build-ev /app/out .
+
+ENTRYPOINT [ "dotnet", "docker-number-Minimal-API.dll" ]
