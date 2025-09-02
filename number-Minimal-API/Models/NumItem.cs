@@ -9,5 +9,5 @@ public class NumItem
     [Required]
     public int Number { get; set; }
 
-    public string? CreatedTime => DateTime.Now.ToLongDateString();
+    public string? CreatedTime => DateTime.Now.ToLongTimeString();
 }
