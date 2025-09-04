@@ -40,6 +40,7 @@ An Angular frontend posts numeric input to a .NET Web API, which uses Polly for 
 
 ## 🖼️ Workflow Diagram
 
+![Workflow Diagram](https://raw.githubusercontent.com/buddhika85/Full-Stack-Demo-Azure-Functions/main/azure-demo-workflow-diagram.png)
 
 
 
