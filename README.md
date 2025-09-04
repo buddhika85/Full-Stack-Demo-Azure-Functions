@@ -2,17 +2,20 @@
 
 This project showcases a full-stack Azure-integrated workflow built with Angular and .NET. It demonstrates how numeric input from a frontend is processed through a resilient, message-driven architecture using multiple Azure services.  
 
+---
 
 ## 🌐 Live Demo
 
 Explore the deployed Angular frontend and Azure-integrated workflow here:  
 🔗 [Azure Integration Demo](https://delightful-desert-009c44900-preview.eastasia.2.azurestaticapps.net/azure-integration-demo)
 
+---
 
 ## 🚀 Architecture Overview
 
 An Angular frontend posts numeric input to a .NET Web API, which uses Polly for resilient HTTP calls to an Azure Function. That function publishes the number to an Azure Service Bus topic. A subscriber Azure Function then routes the number to either an API App or a Container Instance based on its odd/evenness — completing a robust, cloud-native message-driven pipeline.
 
+---
 
 ## 🧩 Azure Services Used
 
@@ -23,6 +26,7 @@ An Angular frontend posts numeric input to a .NET Web API, which uses Polly for 
 - Azure Container Instance
 - Docker Hub (Hosted Image)
 
+---
 
 ## 🛠️ Step-by-Step Flow
 
@@ -37,18 +41,26 @@ An Angular frontend posts numeric input to a .NET Web API, which uses Polly for 
 | 7    | Azure Container Instance   | Hosts a public Dockerized .NET 8 Minimal API, stores odd numbers in EF Core In-Memory DB, and exposes a `Get All` endpoint. [.NET Minimal API Project] (https://github.com/buddhika85/Full-Stack-Demo-Azure-Functions/tree/main/docker-number-Minimal-API) |
 | 8    | Azure Static Web App       | Same frontend as Step 1, consumes APIs from both the API App and Container Instance to display even and odd numbers. This is available in a separate Git repo. [Angular Component Code](https://github.com/buddhika85/Full-Stack-Demo-App/blob/main/Emp.Angular/src/app/components/azure-demo/azure-data-form/azure-data-form.ts) |
 
+---
 
 ## 🖼️ Workflow Diagram
 
 ![Workflow Diagram](https://raw.githubusercontent.com/buddhika85/Full-Stack-Demo-Azure-Functions/main/azure-demo-workflow-diagram.png)
 
-
+---
 
 ## 📦 Source Code & CI/CD
 
 - CI/CD Pipeline: Built with [GitHub Actions](https://github.com/buddhika85/Full-Stack-Demo-Azure-Functions/actions)
 - Builds, tests, and deploys the .NET Web API to Azure App Service
 
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
 
 ## 🎓 Acknowledgment
 This example was inspired by the [.NET Developer Toolkit course  by Les Jackson](https://lesjackson.net/course/dotnet-developer-toolkit), particularly the Azure Developer Basics module. Many thanks to him for his generous guidance and educational resources.
