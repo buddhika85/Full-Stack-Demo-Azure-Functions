@@ -6,7 +6,7 @@ This project showcases a full-stack Azure-integrated workflow built with Angular
 ## 🌐 Live Demo
 
 Explore the deployed Angular frontend and Azure-integrated workflow here:  
-🔗 [Azure Integration Demo](https://delightful-desert-009c44900-preview.eastasia.2.azurestaticapps.net/azure-integration-demo)
+🔗 [Azure Integration Demo](https://delightful-desert-009c44900.2.azurestaticapps.net/azure-integration-demo)
 
 
 ## 🚀 Architecture Overview
