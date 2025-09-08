@@ -21,7 +21,8 @@ An Angular frontend posts numeric input to a .NET Web API, which uses Polly for 
 - Azure Function
 - Azure Service Bus
 - Azure Container Instance
-- Docker Hub (Hosted [Image](https://hub.docker.com/r/gsoft85512/docker-number-minimal-api))
+
+And Docker Hub (Hosted [Image](https://hub.docker.com/r/gsoft85512/docker-number-minimal-api))
 
 
 ## 🛠️ Step-by-Step Flow
