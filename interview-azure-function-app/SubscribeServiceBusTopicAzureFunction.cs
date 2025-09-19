@@ -63,7 +63,12 @@ public class SubscribeServiceBusTopicAzureFunction
             else
             {
                 _logger.LogInformation("---> Service Bus MessageId {MessageId} Number {Number} is ODD", message.MessageId, azServiceBusMessagePayload.Number);
-                await PostToEndPoint(azServiceBusMessagePayload.Number, "http://docker-number-minimal-api.heedhde8cgb2apgs.australiaeast.azurecontainer.io/api/docker-numbers");
+
+                // ACI - Azure container instance has no free tier
+                //await PostToEndPoint(azServiceBusMessagePayload.Number, "http://docker-number-minimal-api.heedhde8cgb2apgs.australiaeast.azurecontainer.io/api/docker-numbers");        
+
+                // Azure Container Apps - has a free tier - so switched from ACI to this
+                await PostToEndPoint(azServiceBusMessagePayload.Number, "https://docker-number-api-container-app.thankfulpebble-67e6a85c.australiaeast.azurecontainerapps.io/api/docker-numbers");
             }
 
             // Complete the message
